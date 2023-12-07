@@ -1,0 +1,85 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        android:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        android:backgroundTint="@color/blue"
+        />
+
+    <ImageView
+        android:id="@+id/shop_image"
+        android:src="@drawable/banner"
+        android:layout_width="400dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center_horizontal"
+        />
+
+    <ListView
+        android:id="@+id/list_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:divider="#d0d0d0"
+        android:dividerHeight="1dp"></ListView>
+
+    <RadioGroup
+        android:id="@+id/rg_tab"
+        android:layout_width="fill_parent"
+        android:layout_height="55dp"
+        android:gravity="center_vertical"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_msg"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:checked="true"
+            android:drawableTop="@drawable/detail"
+            android:gravity="center"
+            android:paddingLeft="0dp"
+            android:text="店家信息" />
+
+        <RadioButton
+            android:id="@+id/rb_people"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/orders"
+            android:gravity="center"
+            android:paddingLeft="0dp"
+            android:text="订单信息" />
+
+        <RadioButton
+            android:id="@+id/rb_me"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/me"
+            android:gravity="center"
+            android:paddingLeft="0dp"
+            android:text="我" />
+    </RadioGroup>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+</LinearLayout>
