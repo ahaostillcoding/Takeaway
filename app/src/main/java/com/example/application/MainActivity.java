@@ -9,6 +9,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 import android.text.TextUtils;
+
+import java.net.URL;
 import java.util.Map;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
@@ -37,6 +39,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         String number = etNumber.getText().toString().trim();
         String password = etPassword.getText().toString();
+
         //检验账号密码
         if (TextUtils.isEmpty(number)) {
             Toast.makeText(this,"请输入账号", Toast.LENGTH_SHORT).show();

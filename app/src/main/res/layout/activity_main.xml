@@ -76,7 +76,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="16dp"
-            android:text="忘记密码？" />
+            android:text="新用户注册" />
 
         <Button
             android:id="@+id/btn_login"

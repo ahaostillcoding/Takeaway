@@ -1,29 +1,56 @@
-<RelativeLayout
+<androidx.coordinatorlayout.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="match_parent">
 
-    <!-- TextView -->
-    <TextView
-        android:id="@+id/shop_name"
-        android:layout_width="wrap_content"
+    <!-- Toolbar -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="30sp"
-        android:textColor="#000000"
-        android:text="name"
-        android:layout_marginLeft="30dp"
-        android:layout_centerVertical="true"
-        />
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar">
 
-    <!-- ImageView -->
-    <ImageView
-        android:id="@+id/shop_image"
-        android:src="@drawable/apple"
-        android:layout_width="100dp"
-        android:layout_height="80dp"
-        android:layout_alignParentEnd="true"
-        android:layout_centerVertical="true"
-        android:layout_marginRight="20dp"
-        />
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:backgroundTint="@color/blue"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:elevation="4dp"
+            android:contentInsetStart="0dp"
+            android:contentInsetLeft="0dp"
+            android:contentInsetEnd="0dp"
+            android:contentInsetRight="0dp">
+        </com.google.android.material.appbar.MaterialToolbar>
 
-</RelativeLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?attr/actionBarSize">
+
+        <!-- TextView -->
+        <TextView
+            android:id="@+id/shop_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:textColor="#000000"
+            android:text="name"
+            android:layout_marginLeft="30dp"
+            />
+
+        <!-- ImageView -->
+        <ImageView
+            android:id="@+id/shop_image"
+            android:src="@drawable/apple"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            />
+
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

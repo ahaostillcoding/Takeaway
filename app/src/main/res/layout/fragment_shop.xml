@@ -1,44 +1,29 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".ShopFragment">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="?attr/colorPrimary"
-        android:elevation="4dp"
-        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
-        android:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-        android:backgroundTint="@color/blue"
-        />
+        android:elevation="4dp" />
 
     <ImageView
         android:id="@+id/shop_image"
-        android:src="@drawable/banner2"
         android:layout_width="400dp"
         android:layout_height="80dp"
-        android:layout_gravity="center_horizontal"
         android:layout_below="@id/toolbar"
-        />
+        android:src="@drawable/banner2"/>
 
     <ListView
         android:id="@+id/list_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="5dp"
-        android:layout_marginBottom="5dp"
-        android:divider="#d0d0d0"
-        android:dividerHeight="1dp"
         android:layout_below="@id/shop_image"
-        >
-
-    </ListView>
-
-    <!-- 底部导航栏 -->
-    <include layout="@layout/navigation_bar"></include>
-
+        android:divider="#d0d0d0"
+        android:dividerHeight="1dp" />
 
 </RelativeLayout>
